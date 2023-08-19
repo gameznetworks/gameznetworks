@@ -1,45 +1,150 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>SineWize</title>
-    <link rel="icon" href="icon.png" type="image/png">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Tags for Social Sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="The Neo Project">
+    <meta property="og:description" content="Neo is a transformative hack designed to enhance the i-Ready learning experience. With Neo, you gain the power to skip lessons and breeze through your educational journey with ease. No longer will you have to suffer from i-Ready.">
+    <meta property="og:image" content="https://media.discordapp.net/attachments/1136036239208874065/1142487641833603213/Neo_Project_Logo.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.css">
     <style>
-      @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300, 400");
-      @import url("https://fonts.googleapis.com/icon?family=Material+Icons");
-      iframe {
-        position:absolute;
-        top:-150px;
-        border:none;
-      }
-      body {
-        background-color: #935d8c;
-        background-image: url(https://optifinesource.co.uk/assets/img/overlay.png), linear-gradient(45deg, #e37682 15%, #5f4d93 85%);
-        font-weight: 300;
-        background-attachment: fixed;
-      }
-      html,*{
-        color: white;
-        border-color: white;
-        background-color:rgba(0,0,0,0);
-        transition: .3s ease-out;
-        outline:none;
-      }
-      div {
-        border: 1px solid white;
-        border-radius:10px;
-      }
+        /* Reset some default styles */
+        body, ul {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1rem 0;
+            position: relative; /* Position relative to place it above particles */
+            z-index: 1; /* Ensure it's above the particles */
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav li {
+            margin: 0 1rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .section {
+            padding: 2rem;
+            text-align: center;
+            position: relative; /* Position relative for content */
+            z-index: 2; /* Ensure content is above the particles */
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Style for the particle container */
+        #particles-js {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 0;
+            background-color: purple; /* Set background color to purple */
+        }
     </style>
-  </head>
-  <body>
-    <iframe id="iframe" src="https://autologout.linewize.net/"></iframe>
-    <h1>This Is SineWize Home Page!</h1>
-    <p>Keep me open for unblock</p>
-  </body>
-  <script type="text/javascript">
-    function test() {
-      document.getElementById('iframe').src="https://autologout.linewize.net/?"+new Date().getTime();
-      setTimeout(function(){test()},2000);
-    }
-    test();
-  </script>
+    <title>The Neo Project</title>
+</head>
+<body>
+    <div id="particles-js"></div> <!-- Use id="particles-js" for the particle container -->
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#discord">Discord</a></li>
+                <li><a href="#github">GitHub</a></li>
+                <li><a href="#iready">i-Ready</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="section">
+        <div class="content">
+            <h1>Welcome to The Neo Project</h1>
+            <p>Neo is a transformative hack designed to enhance the i-Ready learning experience. With Neo, you gain the power to skip lessons and breeze through your educational journey with ease. No longer will you have to suffer from i-Ready.</p>
+        </div>
+    </section>
+
+    <section id="discord" class="section">
+        <!-- Add Discord content here -->
+    </section>
+
+    <section id="github" class="section">
+        <!-- Add GitHub content here -->
+    </section>
+
+    <section id="iready" class="section">
+        <!-- Add i-Ready content here -->
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // Particle.js configuration
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: '#ffffff' },
+                shape: {
+                    type: 'circle',
+                    stroke: { width: 0, color: '#000000' },
+                    polygon: { nb_sides: 5 },
+                },
+                opacity: { value: 0.5, random: false, anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false } },
+                size: { value: 3, random: true, anim: { enable: false, speed: 40, size_min: 0.1, sync: false } },
+                line_linked: { enable: true, distance: 150, color: '#ffffff', opacity: 0.4, width: 1 },
+                move: {
+                    enable: true,
+                    speed: 6,
+                    direction: 'none',
+                    random: false,
+                    straight: false,
+                    out_mode: 'out',
+                    bounce: false,
+                },
+            },
+            interactivity: {
+                detect_on: 'canvas',
+                events: {
+                    onhover: { enable: true, mode: 'repulse' },
+                    onclick: { enable: true, mode: 'push' },
+                    resize: true,
+                },
+                modes: {
+                    grab: { distance: 400, line_linked: { opacity: 1 } },
+                    bubble: { distance: 400, size: 40, duration: 2, opacity: 8, speed: 3 },
+                    repulse: { distance: 200, duration: 0.4 },
+                    push: { particles_nb: 4 },
+                    remove: { particles_nb: 2 },
+                },
+            },
+            retina_detect: true,
+        });
+    </script>
+</body>
 </html>
